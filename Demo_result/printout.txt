@@ -1,0 +1,29 @@
+
+Reading molecules from flavonoids.sdf
+
+molecule 1
+set property Name to value quercetine
+set property No_CAS to value 117-39-5
+set property No_ECHA to value 100.003.807
+set property No_CE to value 204-187-1
+set property DrugBank to value DB04216
+set property PubChem to value 5280343
+set property SMILES to value C1=CC(=C(C=C1C2=C(C(=O)C3=C(C=C(C=C3O2)O)O)O)O)O
+set property InChI to value InChI=1/C15H10O7/c16-7-4-10(19)12-11(5-7)22-15(14(21)13(12)20)6-1-2-8(17)9(18)3-6/h1-5,16-19,21H
+Title 5280343 --> quercetine
+
+molecule 2
+set property Name to value kaempferol
+set property No_CAS to value 520-18-3
+set property No_ECHA to value 100.007.535
+set property DrugBank to value DB01852
+set property PubChem to value 5280863
+set property SMILES to value c12c(oc(c3ccc(O)cc3)c(c1=O)O)cc(O)cc2O
+set property InChI to value InChI=1/C15H10O6/c16-8-3-1-7(2-4-8)15-14(20)13(19)12-10(18)5-9(17)6-11(12)21-15/h1-6,16-18,20H
+Title 5280863 --> kaempferol
+
+Writing modified molecules to qualified_flavonoids.sdf
+
+Looking for property No_CE in qualified_flavonoids.sdf
+quercetine: 204-187-1
+kaempferol: not found
