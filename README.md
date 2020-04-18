@@ -32,9 +32,13 @@ and the second value is a whole property and value text without the final '\n\n'
 
 `python demo.py`
 
-You might want to read the code of demo.py to see how this works.
-
 demo.py performs a few transformation on file "flavonoids.sdf", writes the result in file "qualified_flavonoids.sdf",
 and then queries molecules for the value of the No_CE property.
 
-Demo_result\ contains "qualified_flavonoids.sdf" and "printout.txt", a copy of the text sent to the terminal.
+Demo_result\ contains "qualified_flavonoids.sdf" and "demo_printout.txt", a copy of the text sent to the terminal.
+
+`python updaater.py` prints what to do with updater.py
+
+Updater_result\ contains flavonoids_updated.sdf, the result of
+`python updater.py Name flavonoid_names.txt < flavonoids.sdf > flavonoids_updated.sdf`
+
