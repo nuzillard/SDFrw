@@ -132,6 +132,8 @@ def sdfGetProp(mol, sdfprop):
 	where = sdfkeys.index(sdfprop)
 	value = sdfkeyvals[where][1]
 	eol_pos = value.find('\n')
+	if eol_pos < 0:
+		return ""
 	value = value[eol_pos+1:]
 	return value
 	
