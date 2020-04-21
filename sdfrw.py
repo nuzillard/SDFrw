@@ -1,6 +1,6 @@
 """
 The module sdfrw.py provides:
-- sdfReader(fh) yields compounds stored in an opened sdf file (this is an iterator, not a function)
+- sdfReader(fh) yields compounds stored in an opened sdf file, accessed to by file handle fh (this is an iterator, not a function)
 - sdfWrite(fh, mol) that writes a single compound, mol, to a previously opened text file accessed to by file handle fh
 - sdfTransform(filenameIn, filenameOut, transformation=defaultTransformation) that reads molecules,
 transforms them, and writes them in an other file. The defaultTransformation leaves compounds unchanged.
@@ -18,7 +18,7 @@ transforms them, and writes them in an other file. The defaultTransformation lea
 - sdfChangeTitle(mol, newtitle) --> molecule
 sdfrw.py does not depend on any toolkit of cheminformatic functions
 
-Reading and writing .sdf files with molecule storage as a dictionary with two keys:
+Reading, writing, changing, and quiering .sdf files with molecule storage as a dictionary with two keys:
 "molblock", giving access to the molblock without the final '\n' and
 "keyvals", giving access to a list of pairs, the first value is a sdf property name
 and the second value is a whole property and value text without the final '\n\n'.

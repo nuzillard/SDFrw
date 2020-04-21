@@ -2,7 +2,9 @@
 Demo for the sdfrw.py module.
 Add property to molecules in an sdf file according to values stored in a text file
 
-example: python updater.py Name names.txt < flavonoids.sdf > flavonoids_updated.sdf
+example: python updater.py Name flavonoid_names.txt < flavonoids.sdf > flavonoids_updated.sdf
+result: Molecule property "Name", with values from file flavonoid_names.txt,
+is set or reset for molecules in flavonoids.sdf to produce file flavonoids_updated.sdf.
 """
 
 import sdfrw
