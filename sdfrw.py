@@ -92,7 +92,13 @@ def sdfWrite(fh, mol):
 	sdfWrite() writes the text transcription of molecule dictionary representation mol
 	in file a previously opened for writing and which operates through filehandle fh
 	"""
-	fh.write(mol["molblock"])
+	molblock = mol["molblock"]
+# get MOL block
+	if not molblock:
+# if MOL block is empty
+		return
+# do not do anything
+	fh.write(molblock)
 # write the molblock
 	fh.write('\n')
 # write the trailing '\n' of the molblock
