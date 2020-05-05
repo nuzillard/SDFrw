@@ -44,3 +44,7 @@ Updater_result\ contains "flavonoids_updated.sdf", the result of
 `python updater.py Name flavonoid_names.txt < flavonoids.sdf > flavonoids_updated.sdf`
 
 that sets or resets Name property in "flavonoids.sdf" with values from "flavonoid_names.txt"
+
+`python copy.py < fileIn.sdf > fileOut.sdf`
+
+copies "fileIn.sdf" to "fileOut.sdf " with short tag-name lines, such as `>  <idx>`

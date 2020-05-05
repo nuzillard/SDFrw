@@ -174,7 +174,10 @@ def sdfSetChangeProp(mol, sdfprop, sdfvalue):
 	"""
 	sdfkeyvals = mol["keyvals"]
 	sdfkeys = [pair[0] for pair in sdfkeyvals] if sdfkeyvals else []
-	newpair = (sdfprop, ">  <"+sdfprop+'>\n'+sdfvalue)
+	newsecond = ">  <"+sdfprop+'>'
+	if sdfvalue:
+		newsecond += '\n'+sdfvalue
+	newpair = (sdfprop, newsecond)
 	if sdfprop not in sdfkeys:
 		sdfkeyvals.append(newpair)
 	else:
@@ -193,7 +196,10 @@ def sdfSetNoChangeProp(mol, sdfprop, sdfvalue):
 	sdfkeyvals = mol["keyvals"]
 	sdfkeys = [pair[0] for pair in sdfkeyvals] if sdfkeyvals else []
 	if sdfprop not in sdfkeys:
-		newpair = (sdfprop, ">  <"+sdfprop+'>\n'+sdfvalue)
+		newsecond = ">  <"+sdfprop+'>'
+		if sdfvalue:
+			newsecond += '\n'+sdfvalue
+		newpair = (sdfprop, newsecond)
 		sdfkeyvals.append(newpair)
 		mol["keyvals"] = sdfkeyvals
 		return (True, mol)
