@@ -163,7 +163,7 @@ def sdfClearAllProps(mol):
 	"""
 	sdfClearAllProps() returns molecule mol without any property inside
 	"""
-	mol["keyvals"] == []
+	mol["keyvals"] = []
 	return mol
 
 def sdfSetChangeProp(mol, sdfprop, sdfvalue):

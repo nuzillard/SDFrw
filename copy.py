@@ -1,6 +1,6 @@
 """
 copy.py copies an sdf file from standard input to standard output.
-Side-effect: lignes such as  ">  <tag-name> (n)" are changed to ">  <tag-name>
+Side-effect: lignes such as  ">  <tag-name> (n)" are changed to ">  <tag-name>"
 
 usage: python copy.py < fileIn.sdf > fileOut.sdf
 """
@@ -31,4 +31,4 @@ for molIn in sdfrw.sdfReader(fhIn):
 	molOut = transformation(molIn)
 # transform input molecule to output molecule
 	sdfrw.sdfWrite(fhOut, molOut)
-# write out molecule
+# write output molecule
