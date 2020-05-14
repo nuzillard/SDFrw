@@ -14,14 +14,14 @@ fhOut = sys.stdout
 
 
 def transformation(mol):
-# transormation return a copy a molecule with a fresh new tag line
+# transormation returns a copy a molecule with a fresh new tag line for each property
 	sdfprops = sdfrw.sdfGetPropList(mol)
 # get the list of all tags
 	for sdfprop in sdfprops:
 # loop through tags
 		sdfvalue = sdfrw.sdfGetProp(mol, sdfprop)
 # get the value associated to the current tag
-		sdfrw.sdfSetChangeProp(mol, sdfprop, sdfvalue)
+		done, mol = sdfrw.sdfSetChangeProp(mol, sdfprop, sdfvalue)
 # reset tag and value with a fresh new tag line
 	return mol
 # return the copied molecule
