@@ -74,7 +74,8 @@ def getMolFromTextVariant(text):
 # lines from text without trailing '\n'
 	for i, line in enumerate(lines):
 		limit = i
-		if line == "M  END":
+#		if line == "M  END":
+		if "M  END" in line:
 			break
 # find limit, which is the end of the line that terminates the molblock.
 # The list.index() fonction could have been used here
