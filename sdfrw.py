@@ -8,7 +8,7 @@ transforms them, and writes them in an other file. The defaultTransformation lea
 - sdfHasProp(mol, sdfprop) --> Boolean
 - sdfGetPropList(mol) --> List of strings
 - sdfGetProp(mol, sdfprop) --> String
-- sdfClearProp(mol, sdfprop) --> molecule
+- sdfClearProp(mol, sdfprop) --> (Boolean, molecule)
 - sdfClearAllProps(mol) --> molecule
 - sdfSetChangeProp(mol, sdfprop, sdfvalue) --> (Boolean, molecule)
 - sdfSetNoChangeProp(mol, sdfprop, sdfvalue) --> (Boolean, molecule)
